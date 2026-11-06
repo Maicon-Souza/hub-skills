@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "nome": "Crítica de design",
+    "area": "Design",
+    "descricao": "Avalia telas e mockups com feedback estruturado sobre usabilidade, hierarquia visual, consistência e acessibilidade, com recomendações priorizadas.",
+    "pasta": "critica-de-design"
+  }
+]
