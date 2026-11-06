@@ -43,3 +43,11 @@ Se o usuário não souber ou não quiser responder, siga com suposições razoá
    Use três níveis de gravidade: **Alta** (impede o uso ou causa erro), **Média** (atrapalha ou confunde) e **Baixa** (ajuste fino).
 
 3. **Recomendações prioritárias**: as três mudanças com maior impacto, em ordem.
+
+---
+
+## Créditos e licença
+
+Skill adaptada e traduzida para o português a partir da skill `design-critique`, de autoria da **Anthropic**, publicada em [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) sob a licença **Apache 2.0**. A versão em português chegou via curadoria da [Collective Brain](https://collectivebrain.de) e da [WhiteFox Automations](https://whitefox-automations.com).
+
+Alterações desta versão: tradução, perguntas iniciais de contexto, critério de gravidade, formato de saída detalhado e remoção da dependência de links do Figma.

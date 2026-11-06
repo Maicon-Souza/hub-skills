@@ -310,3 +310,11 @@ Para títulos e CTAs, dê 2 ou 3 opções:
 ### Metadados (se fizer sentido)
 - Título da página (SEO)
 - Meta description
+
+---
+
+## Créditos e licença
+
+Skill adaptada e traduzida para o português a partir da skill `copywriting` (versão 2.3.2), de autoria de **Corey Haines**, publicada em [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) sob a licença **MIT**. Parte do conteúdo original foi adaptada da skill `improved-copywriting` da Profound, também sob licença MIT, como indicado acima.
+
+Alterações desta versão: tradução e adaptação dos exemplos para o português do Brasil, conteúdo dos arquivos de referência incorporado ao texto, remoção das referências a outras skills e a arquivos locais, e descrição encurtada.
