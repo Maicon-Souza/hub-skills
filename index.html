@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hub de Skills | YouX</title>
+<style>
+  :root { --pri:#881d48; --sec:#5e0e2d; --viva:#9d184b; --preto:#1d1d1b; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--preto); background:#faf7f8; }
+  header { background:var(--sec); color:#fff; padding:32px 16px; text-align:center; }
+  header h1 { margin:0 0 8px; font-size:1.8rem; }
+  header p { margin:0; opacity:.85; }
+  main { max-width:960px; margin:0 auto; padding:24px 16px 48px; }
+  .filtros { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .filtros button { border:1px solid var(--pri); background:#fff; color:var(--pri); padding:6px 14px; border-radius:20px; cursor:pointer; font-size:.9rem; }
+  .filtros button.ativo { background:var(--pri); color:#fff; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
+  .card { background:#fff; border-radius:12px; padding:18px; border:1px solid #eadde3; display:flex; flex-direction:column; }
+  .area { font-size:.75rem; font-weight:600; text-transform:uppercase; color:var(--viva); letter-spacing:.04em; }
+  .card h3 { margin:6px 0 8px; font-size:1.1rem; }
+  .card p { margin:0 0 16px; font-size:.92rem; line-height:1.45; flex:1; }
+  .acoes { display:flex; gap:8px; }
+  .btn { text-decoration:none; padding:8px 12px; border-radius:8px; font-size:.88rem; font-weight:600; }
+  .btn.baixar { background:var(--pri); color:#fff; }
+  .btn.codigo { color:var(--pri); border:1px solid var(--pri); }
+  .como { background:#fff; border-left:4px solid var(--pri); border-radius:8px; padding:16px 20px; margin-top:32px; }
+  .como h2 { margin-top:0; font-size:1.2rem; }
+  .como li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hub de Skills</h1>
+  <p>Skills prontas para usar no Claude. Escolha, baixe e instale.</p>
+</header>
+<main>
+  <div class="filtros" id="filtros"></div>
+  <div class="grid" id="grid">Carregando...</div>
+
+  <section class="como">
+    <h2>Como instalar</h2>
+    <p><strong>No Claude (web ou app):</strong></p>
+    <ol>
+      <li>Baixe o .zip da skill (não precisa descompactar).</li>
+      <li>No Claude, vá em <strong>Customize → Skills</strong>.</li>
+      <li>Clique em <strong>+</strong> → <strong>Create skill</strong> → <strong>Upload a skill</strong> e envie o .zip.</li>
+      <li>Ative a skill e peça algo relacionado a ela no chat.</li>
+    </ol>
+    <p>Precisa de plano Pro, Max, Team ou Enterprise, com execução de código ativada nas configurações.</p>
+    <p><strong>No Claude Code:</strong> descompacte e copie a pasta para <code>~/.claude/skills/</code>.</p>
+  </section>
+</main>
+
+<script>
+  const REPO = "Maicon-Souza/hub-skills";
+  let skills = [];
+  let filtro = "Todas";
+
+  function esc(t) {
+    return String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  function render() {
+    const grid = document.getElementById("grid");
+    const filtros = document.getElementById("filtros");
+    if (skills.length === 0) {
+      filtros.innerHTML = "";
+      grid.textContent = "Nenhuma skill publicada ainda.";
+      return;
+    }
+    const areas = ["Todas", ...new Set(skills.map(s => s.area))];
+    filtros.innerHTML = areas.map((a, i) =>
+      `<button class="${a === filtro ? "ativo" : ""}" data-i="${i}">${esc(a)}</button>`
+    ).join("");
+    filtros.querySelectorAll("button").forEach(b =>
+      b.addEventListener("click", () => { filtro = areas[b.dataset.i]; render(); })
+    );
+    const lista = filtro === "Todas" ? skills : skills.filter(s => s.area === filtro);
+    grid.innerHTML = lista.map(s => `
+      <div class="card">
+        <span class="area">${esc(s.area)}</span>
+        <h3>${esc(s.nome)}</h3>
+        <p>${esc(s.descricao)}</p>
+        <div class="acoes">
+          <a class="btn baixar" href="downloads/${encodeURIComponent(s.pasta)}.zip" download>Baixar .zip</a>
+          <a class="btn codigo" href="https://github.com/${REPO}/tree/main/skills/${encodeURIComponent(s.pasta)}" target="_blank" rel="noopener">Ver código</a>
+        </div>
+      </div>`).join("");
+  }
+
+  fetch("skills.json", { cache: "no-store" })
+    .then(r => r.json())
+    .then(d => { skills = d; render(); })
+    .catch(() => { document.getElementById("grid").textContent = "Não foi possível carregar as skills."; });
+</script>
+</body>
+</html>
