@@ -8,19 +8,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --pri:#881d48; --sec:#5e0e2d; --viva:#9d184b; --preto:#1d1d1b; }
+  :root { --pri:#881d48; --sec:#5e0e2d; --viva:#9d184b; --preto:#1d1d1b; --borda:#eadde3; }
   * { box-sizing:border-box; }
-  button { font-family:inherit; }
+  button, input { font-family:inherit; }
   body { margin:0; font-family:'Sora',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--preto); background:#faf7f8; }
   header { background:var(--sec); color:#fff; padding:32px 16px; text-align:center; }
   header h1 { margin:0 0 8px; font-size:1.8rem; }
   header p { margin:0; opacity:.85; }
   main { max-width:960px; margin:0 auto; padding:24px 16px 48px; }
+
+  /* Como instalar: recolhível, no topo */
+  .como { background:#fff; border:1px solid var(--borda); border-left:4px solid var(--pri); border-radius:10px; margin-bottom:20px; }
+  .como summary { cursor:pointer; list-style:none; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; font-weight:600; }
+  .como summary::-webkit-details-marker { display:none; }
+  .como summary small { font-weight:400; color:#6b5a62; }
+  .como summary::after { content:"+"; font-size:1.3rem; color:var(--pri); line-height:1; }
+  .como[open] summary::after { content:"−"; }
+  .como .conteudo { padding:0 18px 16px; font-size:.92rem; line-height:1.5; }
+  .como ol { margin:0 0 12px; padding-left:20px; }
+  .como li { margin-bottom:6px; }
+  .como p { margin:0 0 8px; }
+
+  /* Barra de busca e filtros */
+  .barra { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:12px; }
+  .busca { flex:1; min-width:220px; padding:10px 14px; border:1px solid var(--borda); border-radius:10px; font-size:.95rem; background:#fff; }
+  .busca:focus { outline:2px solid var(--pri); outline-offset:1px; }
+  .total { font-size:.85rem; color:#6b5a62; white-space:nowrap; }
   .filtros { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
   .filtros button { border:1px solid var(--pri); background:#fff; color:var(--pri); padding:6px 14px; border-radius:20px; cursor:pointer; font-size:.9rem; }
   .filtros button.ativo { background:var(--pri); color:#fff; }
+
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
-  .card { background:#fff; border-radius:12px; padding:18px; border:1px solid #eadde3; display:flex; flex-direction:column; }
+  .card { background:#fff; border-radius:12px; padding:18px; border:1px solid var(--borda); display:flex; flex-direction:column; }
   .area { font-size:.75rem; font-weight:600; text-transform:uppercase; color:var(--viva); letter-spacing:.04em; }
   .card h3 { margin:6px 0 8px; font-size:1.1rem; }
   .card p { margin:0 0 16px; font-size:.92rem; line-height:1.45; flex:1; }
@@ -28,9 +47,7 @@
   .btn { text-decoration:none; padding:8px 12px; border-radius:8px; font-size:.88rem; font-weight:600; }
   .btn.baixar { background:var(--pri); color:#fff; }
   .btn.codigo { color:var(--pri); border:1px solid var(--pri); }
-  .como { background:#fff; border-left:4px solid var(--pri); border-radius:8px; padding:16px 20px; margin-top:32px; }
-  .como h2 { margin-top:0; font-size:1.2rem; }
-  .como li { margin-bottom:6px; }
+  .vazio { color:#6b5a62; }
 </style>
 </head>
 <body>
@@ -39,49 +56,69 @@
   <p>Skills prontas para usar no Claude. Escolha, baixe e instale.</p>
 </header>
 <main>
+  <details class="como" id="como">
+    <summary>
+      <span>Como instalar uma skill no Claude <small>· 5 passos, funciona no plano gratuito</small></span>
+    </summary>
+    <div class="conteudo">
+      <ol>
+        <li>Baixe o .zip da skill (não precisa descompactar).</li>
+        <li>No Claude, abra <strong>Configurações</strong> (Settings) → <strong>Recursos</strong> (Capabilities) e ative <strong>Execução de código e criação de arquivos</strong> (Code execution and file creation, ou Create and edit files). Isso só precisa ser feito uma vez.</li>
+        <li>Vá em <strong>Personalizar</strong> (Customize) → <strong>Skills</strong>.</li>
+        <li>Clique em <strong>+</strong> → <strong>Criar skill</strong> (Create skill) → <strong>Enviar uma skill</strong> (Upload a skill) e escolha o .zip.</li>
+        <li>Ative a skill e peça algo relacionado a ela no chat.</li>
+      </ol>
+      <p>Se a opção de skills não aparecer ou estiver cinza, confira o passo 2. Em contas de empresa (Team ou Enterprise), o administrador precisa ter liberado as skills.</p>
+      <p><strong>No Claude Code:</strong> descompacte e copie a pasta para <code>~/.claude/skills/</code>.</p>
+    </div>
+  </details>
+
+  <div class="barra">
+    <input class="busca" id="busca" type="search" placeholder="Buscar skill por nome, área ou descrição" aria-label="Buscar skill">
+    <span class="total" id="total"></span>
+  </div>
   <div class="filtros" id="filtros"></div>
   <div class="grid" id="grid">Carregando...</div>
-
-  <section class="como">
-    <h2>Como instalar</h2>
-    <p><strong>No Claude (web ou app), funciona também no plano gratuito:</strong></p>
-    <ol>
-      <li>Baixe o .zip da skill (não precisa descompactar).</li>
-      <li>No Claude, abra <strong>Configurações</strong> (Settings) → <strong>Recursos</strong> (Capabilities) e ative <strong>Execução de código e criação de arquivos</strong> (Code execution and file creation, ou Create and edit files). Isso só precisa ser feito uma vez.</li>
-      <li>Vá em <strong>Personalizar</strong> (Customize) → <strong>Skills</strong>.</li>
-      <li>Clique em <strong>+</strong> → <strong>Criar skill</strong> (Create skill) → <strong>Enviar uma skill</strong> (Upload a skill) e escolha o .zip.</li>
-      <li>Ative a skill e peça algo relacionado a ela no chat.</li>
-    </ol>
-    <p>Se a opção de skills não aparecer ou estiver cinza, confira o passo 2. Em contas de empresa (Team ou Enterprise), o administrador precisa ter liberado as skills.</p>
-    <p><strong>No Claude Code:</strong> descompacte e copie a pasta para <code>~/.claude/skills/</code>.</p>
-  </section>
 </main>
 
 <script>
   const REPO = "Maicon-Souza/hub-skills";
   let skills = [];
   let filtro = "Todas";
+  let termo = "";
 
   function esc(t) {
     return String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   }
+  // Busca sem diferenciar acento e maiúsculas
+  function norm(t) {
+    return String(t).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  }
 
-  function render() {
-    const grid = document.getElementById("grid");
+  function renderFiltros() {
     const filtros = document.getElementById("filtros");
-    if (skills.length === 0) {
-      filtros.innerHTML = "";
-      grid.textContent = "Nenhuma skill publicada ainda.";
-      return;
-    }
-    const areas = ["Todas", ...new Set(skills.map(s => s.area))];
+    const areas = ["Todas", ...[...new Set(skills.map(s => s.area))].sort((a, b) => a.localeCompare(b, "pt-BR"))];
     filtros.innerHTML = areas.map((a, i) =>
       `<button class="${a === filtro ? "ativo" : ""}" data-i="${i}">${esc(a)}</button>`
     ).join("");
     filtros.querySelectorAll("button").forEach(b =>
-      b.addEventListener("click", () => { filtro = areas[b.dataset.i]; render(); })
+      b.addEventListener("click", () => { filtro = areas[b.dataset.i]; renderFiltros(); renderGrid(); })
     );
-    const lista = filtro === "Todas" ? skills : skills.filter(s => s.area === filtro);
+  }
+
+  function renderGrid() {
+    const grid = document.getElementById("grid");
+    const t = norm(termo.trim());
+    const lista = skills.filter(s =>
+      (filtro === "Todas" || s.area === filtro) &&
+      (!t || norm(`${s.nome} ${s.area} ${s.descricao}`).includes(t))
+    );
+    document.getElementById("total").textContent =
+      `${lista.length} de ${skills.length} skill${skills.length === 1 ? "" : "s"}`;
+    if (lista.length === 0) {
+      grid.innerHTML = `<p class="vazio">Nenhuma skill encontrada.</p>`;
+      return;
+    }
     grid.innerHTML = lista.map(s => `
       <div class="card">
         <span class="area">${esc(s.area)}</span>
@@ -94,9 +131,19 @@
       </div>`).join("");
   }
 
+  document.getElementById("busca").addEventListener("input", e => { termo = e.target.value; renderGrid(); });
+
   fetch("skills.json", { cache: "no-store" })
     .then(r => r.json())
-    .then(d => { skills = d; render(); })
+    .then(d => {
+      skills = d.slice().sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+      if (skills.length === 0) {
+        document.getElementById("grid").textContent = "Nenhuma skill publicada ainda.";
+        return;
+      }
+      renderFiltros();
+      renderGrid();
+    })
     .catch(() => { document.getElementById("grid").textContent = "Não foi possível carregar as skills."; });
 </script>
 </body>
