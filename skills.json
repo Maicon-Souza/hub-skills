@@ -10,5 +10,29 @@
     "area": "Marketing",
     "descricao": "Escreve e melhora textos de sites, landing pages e anúncios: títulos, CTAs e proposta de valor, com linguagem humana e sem cara de IA.",
     "pasta": "copywriting"
+  },
+  {
+    "nome": "Investigação de phishing",
+    "area": "Segurança da Informação",
+    "descricao": "Conduz a investigação de um e-mail de phishing reportado: análise de cabeçalhos, URLs e anexos, quem recebeu e quem clicou, expurgo, bloqueios e relatório final.",
+    "pasta": "investigacao-de-phishing"
+  },
+  {
+    "nome": "Playbook de resposta a incidentes",
+    "area": "Segurança da Informação",
+    "descricao": "Cria playbooks de resposta a incidentes por tipo de ataque, com árvores de decisão, escalonamento, matriz RACI e automação em SOAR, alinhados ao NIST 800-61.",
+    "pasta": "playbook-de-resposta-a-incidentes"
+  },
+  {
+    "nome": "Implementação da ISO 27001",
+    "area": "Segurança da Informação",
+    "descricao": "Guia a implantação de um SGSI pela ISO 27001:2022: escopo, análise de lacunas, avaliação de riscos, controles do Anexo A, Declaração de Aplicabilidade e certificação.",
+    "pasta": "implementacao-iso-27001"
+  },
+  {
+    "nome": "Auditoria de buckets S3",
+    "area": "Segurança da Informação",
+    "descricao": "Audita buckets AWS S3 em busca de acesso público, ACLs e políticas permissivas demais e falta de criptografia, com comandos de AWS CLI, Prowler e remediação.",
+    "pasta": "auditoria-de-buckets-s3"
   }
 ]
