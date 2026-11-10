@@ -52,5 +52,11 @@
     "area": "Growth",
     "descricao": "Prevê e reduz o cancelamento de clientes com health score, playbooks de Customer Success, campanhas de reengajamento, pesquisa de saída, win-back e métricas como NRR e LTV.",
     "pasta": "reducao-de-churn"
+  },
+  {
+    "nome": "Comunicação com clientes",
+    "area": "Consultoria",
+    "descricao": "Organiza a comunicação com clientes de consultoria e projetos: boas-vindas, kick-off, atas, relatórios de progresso, health score, mudanças de escopo, avisos de atraso e gestão de crise.",
+    "pasta": "comunicacao-com-clientes"
   }
 ]
