@@ -40,5 +40,11 @@
     "area": "Marketing",
     "descricao": "Audita e reescreve um perfil do LinkedIn seção por seção: título, Sobre, Destaques, capa, foto, experiências com métricas, competências, URL e recomendações.",
     "pasta": "otimizacao-de-perfil-linkedin"
+  },
+  {
+    "nome": "Redação de posts do LinkedIn",
+    "area": "Marketing",
+    "descricao": "Escreve posts do LinkedIn do zero com 20 fórmulas de gancho escolhidas pelo objetivo (comentários, compartilhamentos, curtidas ou salvamentos), ângulos para fundadores e um filtro contra texto com cara de IA.",
+    "pasta": "redacao-de-posts-linkedin"
   }
 ]
