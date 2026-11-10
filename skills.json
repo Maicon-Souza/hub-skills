@@ -106,5 +106,23 @@
     "area": "Educação",
     "descricao": "Planeja e escreve e-books para captar leads ou apoiar cursos: tema, sumário, capítulos, diagramação, chamadas para ação, página de captura e formatos para qualquer tela.",
     "pasta": "criacao-de-ebooks"
+  },
+  {
+    "nome": "Perfil da Empresa no Google",
+    "area": "SEO",
+    "descricao": "Otimiza o Perfil da Empresa no Google (antigo Google Meu Negócio): dados, categorias, fotos, postagens, avaliações e respostas, desempenho e dados estruturados, dentro das regras do Google.",
+    "pasta": "perfil-da-empresa-no-google"
+  },
+  {
+    "nome": "SEO local",
+    "area": "SEO",
+    "descricao": "Planeja o SEO local de negócios físicos e prestadores de serviço: perfil no Google, nome, endereço e telefone consistentes, citações, links locais, páginas locais e concorrência.",
+    "pasta": "seo-local"
+  },
+  {
+    "nome": "Estratégia de indexação",
+    "area": "SEO",
+    "descricao": "Resolve problemas de rastreamento e indexação: robots.txt, sitemaps, noindex, canonical, redirecionamentos, duplicidade, JavaScript, hreflang e Google Search Console.",
+    "pasta": "estrategia-de-indexacao"
   }
 ]
