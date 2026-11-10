@@ -109,19 +109,19 @@
   },
   {
     "nome": "Perfil da Empresa no Google",
-    "area": "SEO",
+    "area": "Growth",
     "descricao": "Otimiza o Perfil da Empresa no Google (antigo Google Meu Negócio): dados, categorias, fotos, postagens, avaliações e respostas, desempenho e dados estruturados, dentro das regras do Google.",
     "pasta": "perfil-da-empresa-no-google"
   },
   {
     "nome": "SEO local",
-    "area": "SEO",
+    "area": "Growth",
     "descricao": "Planeja o SEO local de negócios físicos e prestadores de serviço: perfil no Google, nome, endereço e telefone consistentes, citações, links locais, páginas locais e concorrência.",
     "pasta": "seo-local"
   },
   {
     "nome": "Estratégia de indexação",
-    "area": "SEO",
+    "area": "Growth",
     "descricao": "Resolve problemas de rastreamento e indexação: robots.txt, sitemaps, noindex, canonical, redirecionamentos, duplicidade, JavaScript, hreflang e Google Search Console.",
     "pasta": "estrategia-de-indexacao"
   }
