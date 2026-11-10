@@ -34,5 +34,11 @@
     "area": "Segurança da Informação",
     "descricao": "Audita buckets AWS S3 em busca de acesso público, ACLs e políticas permissivas demais e falta de criptografia, com comandos de AWS CLI, Prowler e remediação.",
     "pasta": "auditoria-de-buckets-s3"
+  },
+  {
+    "nome": "Otimização de perfil do LinkedIn",
+    "area": "Marketing",
+    "descricao": "Audita e reescreve um perfil do LinkedIn seção por seção: título, Sobre, Destaques, capa, foto, experiências com métricas, competências, URL e recomendações.",
+    "pasta": "otimizacao-de-perfil-linkedin"
   }
 ]
