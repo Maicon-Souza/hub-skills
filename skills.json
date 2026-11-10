@@ -76,5 +76,11 @@
     "area": "Vendas",
     "descricao": "Define e testa preços com custos, impostos, margem de contribuição, ponto de equilíbrio, concorrência, valor percebido, planos e respostas à objeção de preço.",
     "pasta": "estrategia-de-precificacao"
+  },
+  {
+    "nome": "Roteiro de ligação de vendas",
+    "area": "Vendas",
+    "descricao": "Monta roteiros de ligações de vendas para prospecção, descoberta (SPIN, BANT), objeções de preço, tempo e concorrente, e fechamento, sem promessas sem base.",
+    "pasta": "roteiro-de-ligacao-de-vendas"
   }
 ]
