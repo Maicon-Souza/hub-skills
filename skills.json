@@ -58,5 +58,23 @@
     "area": "Consultoria",
     "descricao": "Organiza a comunicação com clientes de consultoria e projetos: boas-vindas, kick-off, atas, relatórios de progresso, health score, mudanças de escopo, avisos de atraso e gestão de crise.",
     "pasta": "comunicacao-com-clientes"
+  },
+  {
+    "nome": "Health score de clientes",
+    "area": "Consultoria",
+    "descricao": "Monta e acompanha o índice de saúde dos clientes de consultorias e serviços B2B: indicadores e pesos, faixas de risco, alertas, planos de recuperação e relatórios.",
+    "pasta": "health-score-de-clientes"
+  },
+  {
+    "nome": "Sistema de follow-up",
+    "area": "Vendas",
+    "descricao": "Cria cadências de follow-up multicanal com gatilhos, textos prontos, recuperação de carrinho abandonado e nutrição de leads frios, respeitando consentimento e LGPD.",
+    "pasta": "sistema-de-follow-up"
+  },
+  {
+    "nome": "Estratégia de precificação",
+    "area": "Vendas",
+    "descricao": "Define e testa preços com custos, impostos, margem de contribuição, ponto de equilíbrio, concorrência, valor percebido, planos e respostas à objeção de preço.",
+    "pasta": "estrategia-de-precificacao"
   }
 ]
