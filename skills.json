@@ -82,5 +82,11 @@
     "area": "Vendas",
     "descricao": "Monta roteiros de ligações de vendas para prospecção, descoberta (SPIN, BANT), objeções de preço, tempo e concorrente, e fechamento, sem promessas sem base.",
     "pasta": "roteiro-de-ligacao-de-vendas"
+  },
+  {
+    "nome": "Playbook de Black Friday",
+    "area": "Marketing",
+    "descricao": "Planeja e escreve a campanha de e-mail da Black Friday: aquecimento, lista VIP, dia da oferta, carrinho abandonado, última chance e pós-venda, com descontos reais e boa entregabilidade.",
+    "pasta": "playbook-black-friday"
   }
 ]
