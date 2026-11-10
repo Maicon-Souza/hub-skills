@@ -46,5 +46,11 @@
     "area": "Marketing",
     "descricao": "Escreve posts do LinkedIn do zero com 20 fórmulas de gancho escolhidas pelo objetivo (comentários, compartilhamentos, curtidas ou salvamentos), ângulos para fundadores e um filtro contra texto com cara de IA.",
     "pasta": "redacao-de-posts-linkedin"
+  },
+  {
+    "nome": "Redução de churn",
+    "area": "Growth",
+    "descricao": "Prevê e reduz o cancelamento de clientes com health score, playbooks de Customer Success, campanhas de reengajamento, pesquisa de saída, win-back e métricas como NRR e LTV.",
+    "pasta": "reducao-de-churn"
   }
 ]
