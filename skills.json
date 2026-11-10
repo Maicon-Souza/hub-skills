@@ -94,5 +94,17 @@
     "area": "Educação",
     "descricao": "Cria e integra podcasts curtos em cursos online: roteiros para o ouvido, estudos de caso interativos, atividades pós-escuta, gamificação, transcrição e acessibilidade.",
     "pasta": "podcast-para-cursos"
+  },
+  {
+    "nome": "Engajamento de alunos",
+    "area": "Educação",
+    "descricao": "Aumenta retenção e conclusão em cursos online com análise de pontos de abandono, gamificação, microlearning, feedback, revisão por pares e plano de ação para alunos em risco.",
+    "pasta": "engajamento-de-alunos"
+  },
+  {
+    "nome": "Criação de e-books",
+    "area": "Educação",
+    "descricao": "Planeja e escreve e-books para captar leads ou apoiar cursos: tema, sumário, capítulos, diagramação, chamadas para ação, página de captura e formatos para qualquer tela.",
+    "pasta": "criacao-de-ebooks"
   }
 ]
