@@ -124,5 +124,17 @@
     "area": "Growth",
     "descricao": "Resolve problemas de rastreamento e indexação: robots.txt, sitemaps, noindex, canonical, redirecionamentos, duplicidade, JavaScript, hreflang e Google Search Console.",
     "pasta": "estrategia-de-indexacao"
+  },
+  {
+    "nome": "Analisador nutricional",
+    "area": "Saúde",
+    "descricao": "Analisa diários alimentares: tendências de calorias e nutrientes, comparação com as recomendações de ingestão, qualidade da dieta e sugestões gerais, com limites claros e encaminhamento profissional.",
+    "pasta": "analisador-nutricional"
+  },
+  {
+    "nome": "Kit de pesquisa biomédica",
+    "area": "Saúde",
+    "descricao": "Consulta PubMed, ClinicalTrials.gov, ChEMBL, Open Targets, OpenFDA, OMIM e outras bases por um servidor MCP, para pesquisa de alvos, reposicionamento de medicamentos e evidências.",
+    "pasta": "kit-de-pesquisa-biomedica"
   }
 ]
