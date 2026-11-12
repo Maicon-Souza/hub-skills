@@ -178,5 +178,11 @@
     "area": "Tecnologia",
     "descricao": "Gera documentação de APIs REST, GraphQL e WebSocket a partir do código: endpoints, autenticação, exemplos em cURL, JavaScript e Python, erros e especificação OpenAPI.",
     "pasta": "documentacao-de-api"
+  },
+  {
+    "nome": "Visualização de dados com GA4",
+    "area": "Growth",
+    "descricao": "Monta dashboards e relatórios do Google Analytics 4 no Looker Studio e no BigQuery: funis de conversão, comparação de atribuição, conteúdo, engajamento e alertas.",
+    "pasta": "visualizacao-de-dados-ga4"
   }
 ]
