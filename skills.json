@@ -166,5 +166,11 @@
     "area": "Tecnologia",
     "descricao": "Cria dashboards do Grafana para aplicações, infraestrutura, bancos e SLOs: painéis, consultas PromQL, variáveis, alertas atuais e provisionamento como código.",
     "pasta": "dashboards-grafana"
+  },
+  {
+    "nome": "Código limpo",
+    "area": "Tecnologia",
+    "descricao": "Padrões pragmáticos para escrever e editar código: nomes claros, funções pequenas, nada de complicação ou comentário óbvio, conferência de dependências e validação antes de concluir.",
+    "pasta": "codigo-limpo"
   }
 ]
