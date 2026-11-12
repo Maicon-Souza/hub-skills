@@ -172,5 +172,11 @@
     "area": "Tecnologia",
     "descricao": "Padrões pragmáticos para escrever e editar código: nomes claros, funções pequenas, nada de complicação ou comentário óbvio, conferência de dependências e validação antes de concluir.",
     "pasta": "codigo-limpo"
+  },
+  {
+    "nome": "Documentação de API",
+    "area": "Tecnologia",
+    "descricao": "Gera documentação de APIs REST, GraphQL e WebSocket a partir do código: endpoints, autenticação, exemplos em cURL, JavaScript e Python, erros e especificação OpenAPI.",
+    "pasta": "documentacao-de-api"
   }
 ]
