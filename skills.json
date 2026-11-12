@@ -184,5 +184,11 @@
     "area": "Growth",
     "descricao": "Monta dashboards e relatórios do Google Analytics 4 no Looker Studio e no BigQuery: funis de conversão, comparação de atribuição, conteúdo, engajamento e alertas.",
     "pasta": "visualizacao-de-dados-ga4"
+  },
+  {
+    "nome": "Plano de Reels",
+    "area": "Marketing",
+    "descricao": "Planeja e roteiriza vídeos curtos para Instagram Reels, TikTok e YouTube Shorts: tendências, ganchos, roteiros, legendas, publicação, links rastreados e métricas.",
+    "pasta": "plano-de-reels"
   }
 ]
