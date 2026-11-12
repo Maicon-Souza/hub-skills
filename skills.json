@@ -160,5 +160,11 @@
     "area": "Tecnologia",
     "descricao": "Cria e otimiza Dockerfiles e Docker Compose: builds em várias etapas, imagens menores, segurança de containers, segredos, redes, healthchecks e diagnóstico de problemas.",
     "pasta": "especialista-em-docker"
+  },
+  {
+    "nome": "Dashboards do Grafana",
+    "area": "Tecnologia",
+    "descricao": "Cria dashboards do Grafana para aplicações, infraestrutura, bancos e SLOs: painéis, consultas PromQL, variáveis, alertas atuais e provisionamento como código.",
+    "pasta": "dashboards-grafana"
   }
 ]
