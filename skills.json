@@ -202,5 +202,11 @@
     "area": "Marketing",
     "descricao": "Aumenta comentários, compartilhamentos e participação nas redes: recursos interativos, perguntas que geram conversa, respostas, desafios com conteúdo do público e comunidade, sem iscas.",
     "pasta": "taticas-de-engajamento"
+  },
+  {
+    "nome": "Estrutura de masterclass",
+    "area": "Educação",
+    "descricao": "Estrutura masterclasses e cursos online: promessa realista, módulos com entregáveis, roteiros de aula, atividades, projeto final com rubrica, engajamento e gamificação.",
+    "pasta": "estrutura-de-masterclass"
   }
 ]
