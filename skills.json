@@ -154,5 +154,11 @@
     "area": "Tecnologia",
     "descricao": "Referência para projetar tabelas no PostgreSQL: tipos de dados, chaves, restrições, índices, particionamento, JSONB, segurança por linha e evolução segura do schema.",
     "pasta": "design-de-tabelas-postgres"
+  },
+  {
+    "nome": "Especialista em Docker",
+    "area": "Tecnologia",
+    "descricao": "Cria e otimiza Dockerfiles e Docker Compose: builds em várias etapas, imagens menores, segurança de containers, segredos, redes, healthchecks e diagnóstico de problemas.",
+    "pasta": "especialista-em-docker"
   }
 ]
