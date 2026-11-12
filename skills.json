@@ -130,5 +130,11 @@
     "area": "Saúde",
     "descricao": "Analisa diários alimentares: tendências de calorias e nutrientes, comparação com as recomendações de ingestão, qualidade da dieta e sugestões gerais, com limites claros e encaminhamento profissional.",
     "pasta": "analisador-nutricional"
+  },
+  {
+    "nome": "Humanizador de texto",
+    "area": "Marketing",
+    "descricao": "Reescreve textos com cara de IA para soarem como quem escreve, sem mudar o conteúdo: tira contrastes forçados, frases de efeito, listas de três, travessões, exageros, decalques do inglês e restos de chatbot.",
+    "pasta": "humanizador-de-texto"
   }
 ]
