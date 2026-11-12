@@ -142,5 +142,11 @@
     "area": "Consultoria",
     "descricao": "Analisa transcrições das suas reuniões e mostra seus padrões de comunicação: quando evita conflito, fala demais, interrompe, usa muletas ou deixa de ouvir, com exemplos e sugestões.",
     "pasta": "analise-de-reunioes"
+  },
+  {
+    "nome": "Design em tela",
+    "area": "Design",
+    "descricao": "Cria pôsteres, artes e peças visuais estáticas em PNG ou PDF a partir de uma filosofia de design própria, com execução caprichada e 40 fontes livres incluídas.",
+    "pasta": "design-em-tela"
   }
 ]
