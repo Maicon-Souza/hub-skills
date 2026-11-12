@@ -136,5 +136,11 @@
     "area": "Marketing",
     "descricao": "Reescreve textos com cara de IA para soarem como quem escreve, sem mudar o conteúdo: tira contrastes forçados, frases de efeito, listas de três, travessões, exageros, decalques do inglês e restos de chatbot.",
     "pasta": "humanizador-de-texto"
+  },
+  {
+    "nome": "Análise de reuniões",
+    "area": "Consultoria",
+    "descricao": "Analisa transcrições das suas reuniões e mostra seus padrões de comunicação: quando evita conflito, fala demais, interrompe, usa muletas ou deixa de ouvir, com exemplos e sugestões.",
+    "pasta": "analise-de-reunioes"
   }
 ]
