@@ -148,5 +148,11 @@
     "area": "Design",
     "descricao": "Cria pôsteres, artes e peças visuais estáticas em PNG ou PDF a partir de uma filosofia de design própria, com execução caprichada e 40 fontes livres incluídas.",
     "pasta": "design-em-tela"
+  },
+  {
+    "nome": "Design de tabelas no PostgreSQL",
+    "area": "Tecnologia",
+    "descricao": "Referência para projetar tabelas no PostgreSQL: tipos de dados, chaves, restrições, índices, particionamento, JSONB, segurança por linha e evolução segura do schema.",
+    "pasta": "design-de-tabelas-postgres"
   }
 ]
