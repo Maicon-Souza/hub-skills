@@ -214,5 +214,11 @@
     "area": "Educação",
     "descricao": "Configura tutores de IA para cursos: prompt de sistema, base de conhecimento com citações, conteúdo e exercícios, retorno ao aluno, gamificação, escalonamento humano e LGPD.",
     "pasta": "tutor-com-ia"
+  },
+  {
+    "nome": "Workflows no n8n",
+    "area": "Tecnologia",
+    "descricao": "Projeta e depura automações no n8n: webhooks, agendamentos, HTTP Request, nó Code, expressões, credenciais, tratamento de erros, sub-workflows e segurança.",
+    "pasta": "workflows-n8n"
   }
 ]
