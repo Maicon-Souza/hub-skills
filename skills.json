@@ -220,5 +220,11 @@
     "area": "Tecnologia",
     "descricao": "Projeta e depura automações no n8n: webhooks, agendamentos, HTTP Request, nó Code, expressões, credenciais, tratamento de erros, sub-workflows e segurança.",
     "pasta": "workflows-n8n"
+  },
+  {
+    "nome": "Revisão de código com IA",
+    "area": "Tecnologia",
+    "descricao": "Revisa diffs e pull requests com foco em correção, segurança, desempenho e testes, e monta revisões automáticas de PR com a API do Claude, de forma segura.",
+    "pasta": "revisao-de-codigo-com-ia"
   }
 ]
