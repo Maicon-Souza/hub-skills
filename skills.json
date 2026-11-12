@@ -208,5 +208,11 @@
     "area": "Educação",
     "descricao": "Estrutura masterclasses e cursos online: promessa realista, módulos com entregáveis, roteiros de aula, atividades, projeto final com rubrica, engajamento e gamificação.",
     "pasta": "estrutura-de-masterclass"
+  },
+  {
+    "nome": "Tutor com IA",
+    "area": "Educação",
+    "descricao": "Configura tutores de IA para cursos: prompt de sistema, base de conhecimento com citações, conteúdo e exercícios, retorno ao aluno, gamificação, escalonamento humano e LGPD.",
+    "pasta": "tutor-com-ia"
   }
 ]
