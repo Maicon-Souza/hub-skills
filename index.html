@@ -10,7 +10,7 @@
 <style>
   :root { --pri:#881d48; --sec:#5e0e2d; --viva:#9d184b; --preto:#1d1d1b; --borda:#eadde3; }
   * { box-sizing:border-box; }
-  button, input { font-family:inherit; }
+  button, input, select { font-family:inherit; }
   body { margin:0; font-family:'Sora',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; color:var(--preto); background:#faf7f8; }
   header { background:var(--sec); color:#fff; padding:32px 16px; text-align:center; }
   header h1 { margin:0 0 8px; font-size:1.8rem; }
@@ -22,21 +22,21 @@
   .como summary { cursor:pointer; list-style:none; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; font-weight:600; }
   .como summary::-webkit-details-marker { display:none; }
   .como summary small { font-weight:400; color:#6b5a62; }
-  .como summary::after { content:"+"; font-size:1.3rem; color:var(--pri); line-height:1; }
-  .como[open] summary::after { content:"−"; }
+  /* Seta: ">" fechado, "^" aberto */
+  .como summary::after { content:""; flex:none; width:9px; height:9px; margin-right:4px; border-right:2.5px solid var(--pri); border-bottom:2.5px solid var(--pri); transform:rotate(-45deg); transition:transform .2s; }
+  .como[open] summary::after { transform:rotate(-135deg); }
   .como .conteudo { padding:0 18px 16px; font-size:.92rem; line-height:1.5; }
   .como ol { margin:0 0 12px; padding-left:20px; }
   .como li { margin-bottom:6px; }
   .como p { margin:0 0 8px; }
 
   /* Barra de busca e filtros */
-  .barra { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:12px; }
+  .barra { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:20px; }
   .busca { flex:1; min-width:220px; padding:10px 14px; border:1px solid var(--borda); border-radius:10px; font-size:.95rem; background:#fff; }
   .busca:focus { outline:2px solid var(--pri); outline-offset:1px; }
   .total { font-size:.85rem; color:#6b5a62; white-space:nowrap; }
-  .filtros { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
-  .filtros button { border:1px solid var(--pri); background:#fff; color:var(--pri); padding:6px 14px; border-radius:20px; cursor:pointer; font-size:.9rem; }
-  .filtros button.ativo { background:var(--pri); color:#fff; }
+  .filtro { padding:10px 38px 10px 14px; border:1px solid var(--borda); border-radius:10px; font-size:.95rem; background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23881d48' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center; color:var(--preto); cursor:pointer; appearance:none; -webkit-appearance:none; }
+  .filtro:focus { outline:2px solid var(--pri); outline-offset:1px; }
 
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; }
   .card { background:#fff; border-radius:12px; padding:18px; border:1px solid var(--borda); display:flex; flex-direction:column; }
@@ -75,9 +75,9 @@
 
   <div class="barra">
     <input class="busca" id="busca" type="search" placeholder="Buscar skill por nome, área ou descrição" aria-label="Buscar skill">
+    <select class="filtro" id="filtro" aria-label="Filtrar por área"></select>
     <span class="total" id="total"></span>
   </div>
-  <div class="filtros" id="filtros"></div>
   <div class="grid" id="grid">Carregando...</div>
 </main>
 
@@ -96,15 +96,13 @@
   }
 
   function renderFiltros() {
-    const filtros = document.getElementById("filtros");
-    const areas = ["Todas", ...[...new Set(skills.map(s => s.area))].sort((a, b) => a.localeCompare(b, "pt-BR"))];
-    filtros.innerHTML = areas.map((a, i) =>
-      `<button class="${a === filtro ? "ativo" : ""}" data-i="${i}">${esc(a)}</button>`
-    ).join("");
-    filtros.querySelectorAll("button").forEach(b =>
-      b.addEventListener("click", () => { filtro = areas[b.dataset.i]; renderFiltros(); renderGrid(); })
-    );
+    const sel = document.getElementById("filtro");
+    const areas = [...new Set(skills.map(s => s.area))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+    sel.innerHTML = `<option value="Todas">Todas as áreas</option>` +
+      areas.map(a => `<option value="${esc(a)}">${esc(a)}</option>`).join("");
+    sel.value = filtro;
   }
+  document.getElementById("filtro").addEventListener("change", e => { filtro = e.target.value; renderGrid(); });
 
   function renderGrid() {
     const grid = document.getElementById("grid");
