@@ -168,29 +168,6 @@ hub-skills/
 └── downloads/        # .zip prontos para enviar ao Claude
 ```
 
-## ➕ Adicionando uma skill
 
-1. Crie a pasta `skills/<nome-da-skill>/` com um `SKILL.md`. O cabeçalho precisa de `name` e `description`:
-   ```markdown
-   ---
-   name: nome-da-skill
-   description: O que a skill faz e quando o Claude deve usá-la.
-   ---
-   ```
-2. Gere o `.zip` da pasta em `downloads/<nome-da-skill>.zip`.
-3. Adicione a entrada em `skills.json`:
-   ```json
-   {
-     "nome": "Nome da skill",
-     "area": "Tecnologia",
-     "descricao": "Uma frase sobre o que ela entrega.",
-     "pasta": "nome-da-skill"
-   }
-   ```
-4. Faça o push. O site lê o `skills.json` e a skill aparece automaticamente.
 
 ---
-
-<div align="center">
-<sub>Feito com ☕ pela YouX</sub>
-</div>
