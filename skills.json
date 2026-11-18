@@ -1,5 +1,11 @@
 [
   {
+    "nome": "Analista de leads",
+    "area": "Skill da aula",
+    "descricao": "Lê uma planilha de leads no Google Drive e entrega ranking com nota de 0 a 100, os 3 contatos prioritários do dia com mensagens de WhatsApp prontas e insights do funil.",
+    "pasta": "analista-de-leads"
+  },
+  {
     "nome": "Crítica de design",
     "area": "Design",
     "descricao": "Avalia telas e mockups com feedback estruturado sobre usabilidade, hierarquia visual, consistência e acessibilidade, com recomendações priorizadas.",

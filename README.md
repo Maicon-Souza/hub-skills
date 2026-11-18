@@ -5,8 +5,8 @@
 **Skills prontas para usar no Claude. Escolha, baixe e instale.**
 
 [![Site](https://img.shields.io/badge/site-hub--skills-D97757?style=for-the-badge)](https://maicon-souza.github.io/hub-skills/)
-![Skills](https://img.shields.io/badge/skills-38-2B2B2B?style=for-the-badge)
-![Áreas](https://img.shields.io/badge/áreas-8-2B2B2B?style=for-the-badge)
+![Skills](https://img.shields.io/badge/skills-39-2B2B2B?style=for-the-badge)
+![Áreas](https://img.shields.io/badge/áreas-10-2B2B2B?style=for-the-badge)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2B2B2B?style=for-the-badge)
 
 ### [👉 Abrir o hub](https://maicon-souza.github.io/hub-skills/)
@@ -45,6 +45,15 @@ unzip codigo-limpo.zip -d ~/.claude/skills/
 ```
 
 ## 📚 Catálogo
+
+<details open>
+<summary><strong>🧑‍🏫 Skill da aula</strong> · 1 skill</summary>
+
+| Skill | O que faz |
+|---|---|
+| [Analista de leads](skills/analista-de-leads) | Lê uma planilha de leads no Google Drive e entrega ranking com nota 0–100, o Top 3 do dia com mensagens de WhatsApp e insights do funil. |
+
+</details>
 
 <details open>
 <summary><strong>💻 Tecnologia</strong> · 7 skills</summary>
